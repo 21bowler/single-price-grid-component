@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --Light-neutral-Gray: hsl(204, 43%, 93%);
+    --Grayish-neutral-Blue: hsl(218, 22%, 67%);
+    --Cyan-primary: hsl(179, 62%, 43%);
+    --Bright-Yellow-primary: hsl(71, 73%, 54%);
+}
+
+body{
+    font-family: 'Karla', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: var(--Light-neutral-Gray);
+}
+
+
+/* First div styling */
+.first-div {
+    background: #fff;
+    padding: 28px 40px;
+    color: #858282;
+    grid-area: head;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.first-div > h2{
+    margin-bottom: 14px;
+    color: var(--Cyan-primary);
+}
+
+.para1{
+    color: var(--Bright-Yellow-primary);
+    margin-bottom: 15px;
+}
+
+.container-all{
+    display: grid;
+    grid-template-areas: 
+    "head head"
+    "aside main"; 
+}
+
+
+/* second div styling */
+.second-div{
+    background: var(--Cyan-primary);
+    color: var(--Light-neutral-Gray);
+    padding-top: 30px;
+    padding-left: 28px;
+    border-bottom-left-radius: 12px;
+}
+
+.second-div > h3 {
+    padding-bottom: 20px;
+}
+
+.dollar {
+    padding-bottom: 15px;
+}
+
+.dollar span {
+    font-size: 25px;
+    font-weight: 700;
+    padding-right: 10px;
+}
+
+
+/* Button sign up styling */
+button{
+    background: var(--Bright-Yellow-primary);
+    border: none;
+    width: 80%;
+    margin-top: 24px;
+    padding: 12px;
+    color: var(--Light-neutral-Gray);
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+/* Third div styling */
+.third-div{
+    background: #3cdddc;
+    color: var(--Light-neutral-Gray);
+    padding-top: 30px;
+    padding-left: 28px;
+    padding-bottom: 35px;
+    border-bottom-right-radius: 12px;
+}
+
+.third-div > h3{
+    padding-bottom: 20px;
+}
+
+.third-div > ul {
+    list-style: none;
+}
+
+/* Footer styling */
+.footer{
+    text-align: center;
+    margin:40px 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+@media screen and (max-width: 480px) {
+    .container-all{
+        display: grid;
+        grid-template-areas: 
+        "head"
+        "aside"
+        "main";
+        /* width: 80%; */
+        padding: 20px;
+    }
+    .second-div{
+        border-bottom-left-radius: 0;
+        padding-bottom: 20px;
+    }
+    .third-div {
+        border-bottom-left-radius: 12px;
+    }
+}
